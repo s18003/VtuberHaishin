@@ -1,0 +1,232 @@
+
+body {
+    text-align:  center;
+    background-image: url(../images/haikei.png);
+    background-size: 300px;
+}
+
+table {
+    margin:0 auto;
+}
+
+.haikei {
+  max-width: 100%;
+  height: auto;
+}
+
+.zenbu {
+  max-width: 100%;
+  width: 1000px;
+  height: 1500px;
+  margin: 10px auto;
+  padding: 20px 50px;
+  background: hsla(330, 100%, 82%, 0.281);
+}
+
+.botan {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #ffa959;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 2px #d27d00;/*線色*/
+}
+
+.botan:hover {
+  background-color: #ff5151;
+}
+
+.koushin {
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #03A9F4;/*色*/
+  border: solid 1px #0f9ada;/*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.koushin:hover {
+  background-color: #1437ff;
+}
+
+.sakuzyo:hover {
+  background-color: rgb(46, 35, 35);
+  color: whitesmoke;
+}
+
+.opusyon {
+  margin: 20px 10px;
+  padding: 10px;
+  background: repeating-linear-gradient(-45deg,
+  #e60033 , #e60033 5px,
+  #fff 5px, #fff 10px, #f08300 10px, #f08300 15px,
+  #fff 15px, #fff 20px, #ffd900 20px, #ffd900 25px,
+  #fff 25px, #fff 30px, #3eb370 30px, #3eb370 35px,
+  #fff 35px, #fff 40px, #bce2e8 40px, #bce2e8 45px,
+  #fff 45px, #fff 50px, #0095d9 50px, #0095d9 55px,
+  #fff 55px, #fff 60px, #884898 60px, #884898 65px,
+  #fff 65px, #fff 70px);
+  box-shadow: 0 1px 4px #9ea1a3;
+}
+.opusyon2 {
+  width: auto;
+  padding: 10px;
+  border: 5px solid #ffd900;
+  background-color: hsla(0,0%,100%,1.0);
+}
+
+/*
+.opusyon {
+  margin: 20px 10px;
+  padding: 10px;
+  background: radial-gradient(#ffe0bd, rgb(255, 201, 150));
+  box-shadow: 0px 0px 0px 10px rgb(255, 201, 150);
+  border: dashed 2px rgb(255, 66, 66);
+}
+*/
+
+
+.narabikae {
+  margin: 0 auto;
+  display: flex;
+}
+
+.hidari {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255);
+  box-shadow: 0px 0px 0px 10px white;
+  border: dashed 2px rgb(0, 132, 255);
+}
+
+.nyuryokusite {
+  font-size: 2em;
+  font-family: "BIZ UDPゴシック","BIZ UDPGothic"; font-weight: 900;
+  color: rgb(247, 35, 35);
+}
+
+.migi {
+  margin: 10px 30px;
+  padding: 10px;
+  background: rgba(255, 255, 255);
+  background-size: cover;
+  box-shadow: 0px 0px 0px 10px white;
+  border: dashed 2px rgb(0, 132, 255);
+}
+
+.hedda {
+  padding: 10px;
+  background-image: url(../images/haikei.jpg);
+  background-size: contain;
+}
+
+h1 {
+    /* フォントサイズなどを任意で指定する */
+    font: bold 3em / 1 Verdana, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    
+    /* 背景グラデーションを指定・幅を 200% にしておく */
+    background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+    
+    /* 背景画像を文字でマスクする */
+            background-clip: text;
+    -webkit-background-clip: text;
+    
+    /* 文字色を透明にできればよく color: transparent でも color: rgba(0, 0, 0, 0) でも可 */
+            text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    
+    /* アニメーション指定 */
+    animation: example 4s linear infinite;
+  }
+  
+  /* 背景の横位置をズラす */
+  @keyframes example {
+    to { background-position-x: 200%; }
+  }
+
+
+
+
+  @media screen and (max-width: 768px) {
+    body {
+      text-align:  center;
+      background-image: url(../images/haikei.png);
+      background-size: 300px;
+      width: auto;
+  }
+  
+  table {
+      margin:0 auto;
+  }
+  
+  .haikei {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .zenbu {
+    max-width: 100%;
+    width: auto;
+    height: 1500px;
+    margin: 10px auto;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.884);
+  }
+  
+  .narabikae {
+    margin: 0 auto;
+    flex-direction:column;
+  }
+  
+  .hidari {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    margin:auto;
+  }
+  
+  .migi {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .hedda {
+    padding: 10px;
+    background-color: rgb(215, 249, 255);
+  }
+  
+  h1 {
+      /* フォントサイズなどを任意で指定する */
+      font: bold 1.8em / 1 Verdana, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      
+      /* 背景グラデーションを指定・幅を 200% にしておく */
+      background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+      
+      /* 背景画像を文字でマスクする */
+              background-clip: text;
+      -webkit-background-clip: text;
+      
+      /* 文字色を透明にできればよく color: transparent でも color: rgba(0, 0, 0, 0) でも可 */
+              text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      
+      /* アニメーション指定 */
+      animation: example 4s linear infinite;
+    }
+    
+    /* 背景の横位置をズラす */
+    @keyframes example {
+      to { background-position-x: 200%; }
+    }
+  }

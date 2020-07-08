@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>推しVtuber配信予定表</title>
+
+<head>
+    <!--hrefの後ろにある?q=以降の数字はキャッシュ防止。数値変えないとcssくん反映されない　変えても無理な場合は新しく桁追加する-->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css?q=99959999999999">
+    <link rel="shortcut icon" href="static/images/favicon.ico">
+
+     <!-- jsによるソート機能実装　上手くいかなかったので今のところ保留
+     <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+     <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
+     <script type="text/javascript" src="/static/js/sample.js"></script>
+     -->
+</head>
+
+<div class="haikei">
+    <div class="zenbu">
+        <div class="hedda">
+            <h1>人人人人人人人人人人人人人人人人人人<br>
+                ＜　　　　　 　お気に入り　　　　 　　＞<br>
+                ＜ 　バーチャルYoutuber配信予定表 ＞<br>
+                Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y</h1>
+        </div>
+
+        <div class="opusyon">
+            <div class="opusyon2">
+                <p class="nyuryokusite">好きな推しバーチャルYoutuberの名前をいれてね</p>
+        
+                <form action="/add" method="post">
+                    <input type="text" name="name" placeholder="例:樋口楓" style="height: 1.5em; font-size: 100%;">
+                    <input type="submit" value="ついか" class="botan">
+                </form>
+                <!--入力されたやつが配信予定表に存在しない場合-->
+                {% if vname %}
+                {% else %}
+                {{naiyo}}<br>
+                {% endif %}
+        
+                <form action="/update" method="post">
+                    <input type="submit" value="配信予定表を最新に更新する" class="koushin">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="narabikae">
+
+            <!--Vtuber名前のみの表-->
+            <div class="hidari">
+                <table border="1" width="auto">
+                    <thead>
+                        <tr>
+                            <th>
+                                <form action="/delete" method="post" id="delete">
+                                    <input type="submit" value="削除" class="sakuzyo">
+                                </form>
+                            </th>
+                            <th style="min-width: 90px;">
+                                推しVtuber一覧
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for buiname in all_name %}
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="delete" form="delete" value={{buiname.id}}>
+                            </td>
+                            <td>
+                                <a target="_blank" href={{"https://virtual-youtuber.userlocal.jp" + buiname.url}}>
+                                    {{buiname.name}}
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+            <!--ここまで-->
+
+
+            <!--配信表-->
+            <div class="migi">
+                <table border="1" width="auto">
+                    <thead>
+                        <tr>
+                            <th>
+                                <form action="/kesu" method="post" id="kesu">
+                                    <input type="submit" value="削除" class="sakuzyo">
+                                </form>
+                            </th>
+                            <th>配信開始時間</th>
+                            <th>配信タイトル</th>
+                            <th style="min-width: 60px;">配信者</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for vtuber in all_vtuber %}
+                        <tr id="test">
+                            <td>
+                                <input type="checkbox" name="kesu" form="kesu" value={{vtuber.id}}></td>
+                            <td id="hiduke" style="width:120px;">
+                                {{vtuber.date}}
+                            </td>
+                            <td>
+                                <a target="_blank" href={{"https://virtual-youtuber.userlocal.jp" + vtuber.url2}}
+                                    style="width:auto;">
+                                    {{vtuber.title}}
+                                </a>
+                            </td>
+                            <td>
+                                <a target="_blank" href={{"https://virtual-youtuber.userlocal.jp" + vtuber.url1}}
+                                    style="width:auto;">
+                                    {{vtuber.name}}
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+                <a target="_blank" href="https://virtual-youtuber.userlocal.jp/schedules">配信予定確認(本家)</a>
+            </div>
+            <!--ここまで-->
+
+
+        </div>
+
+
+    </div>
+
+    </body>
+
+</html>
