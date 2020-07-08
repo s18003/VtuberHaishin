@@ -11,7 +11,7 @@
 
 
 
-# 使うための前準備
+## 使うための前準備
 pythonの実行環境を整える(利用するためにpythonが必要なので)
 
 ここ参照　https://www.sejuku.net/blog/33294
@@ -25,7 +25,7 @@ pip3 install sqlalchemy        # データベース
 ```
 
 
-# 使い方
+## 使い方
 run.pyを実行
 
 うまくいけばURLが出てくるのでそこにアクセスする(localhost:5000でいける)
