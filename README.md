@@ -26,7 +26,7 @@ pip3 install sqlalchemy        # データベース
 
 
 ## 使い方
-'run.py'を実行
+`run.py`を実行
 
 うまくいけばURLが出てくるのでそこにアクセスする(localhost:5000でいける)
 
