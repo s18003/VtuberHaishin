@@ -19,9 +19,9 @@ pythonの実行環境を整える(利用するためにpythonが必要なので)
 あとこいつらもインストール推奨
 
 ```bash
-pip3 install Flask
-pip3 install beautifulsoup4
-pip3 install sqlalchemy
+pip3 install Flask             # webアプリケーションの土台的なやつ
+pip3 install beautifulsoup4    # webスクレイピングに使うやつ
+pip3 install sqlalchemy        # データベース
 ```
 
 
