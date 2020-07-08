@@ -1,6 +1,4 @@
-# VtuberHaishin
-
-# これなに？
+# 推しVtuber配信予定表
 こいつは「推しVtuber配信予定表」
 
 実はもともとVtuberの配信予定表サイトが存在するのだが、
@@ -9,7 +7,7 @@
 
 これでは目が疲れる(当社比)ので、
 
-自分が見たいVtuberの配信予定だけをとってこれるのが、この推しVtuber配信予定表です
+自分が見たいVtuberの配信予定だけをとってこれるのが、この推しVtuber配信予定表
 
 
 
@@ -20,11 +18,11 @@ pythonの実行環境を整える(利用するためにpythonが必要なので)
 
 あとこいつらもインストール推奨
 
-'''bash
+```bash
 pip3 install Flask
 pip3 install beautifulsoup4
 pip3 install sqlalchemy
-'''
+```
 
 
 # 使い方
