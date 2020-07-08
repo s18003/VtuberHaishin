@@ -14,7 +14,7 @@
 ## 使うための前準備
 pythonの実行環境を整える(利用するためにpythonが必要なので)
 
-ここ(https://www.sejuku.net/blog/33294)参照
+[ここ](https://www.sejuku.net/blog/33294)参照
 
 あとこいつらもインストール推奨
 
