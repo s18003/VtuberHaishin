@@ -8,9 +8,9 @@
 
 
 # 使うための前準備
-pythonの実行環境を整える ここ参照
+pythonの実行環境を整える 
 
-https://www.sejuku.net/blog/33294
+ここ参照　https://www.sejuku.net/blog/33294
 
 
 
